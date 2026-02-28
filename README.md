@@ -1,62 +1,58 @@
 🚀 VLSI_EDA_ML_Pipeline
 Machine Learning-Augmented Electronic Design Automation for VLSI Optimization
-📌 Abstract
+📌 Overview
 
-Modern Electronic Design Automation (EDA) workflows for VLSI systems are computationally intensive and heavily heuristic-driven. This project introduces a modular Machine Learning (ML) pipeline designed to assist and accelerate critical EDA stages such as timing analysis, power estimation, congestion prediction, and design space exploration.
+This repository implements a structured Machine Learning pipeline designed to enhance Electronic Design Automation (EDA) workflows in VLSI design.
 
-The objective is to integrate data-driven predictive models into conventional EDA flows to reduce runtime, improve optimization quality, and enable intelligent feedback mechanisms.
+Modern VLSI design flows are computationally intensive and rely heavily on heuristics. This project integrates data-driven predictive modeling to accelerate optimization stages such as timing analysis, power estimation, congestion prediction, and design space exploration.
 
-🎯 Objectives
+The goal is to bridge AI and semiconductor physical design through scalable ML-assisted automation.
 
-Develop an end-to-end ML pipeline tailored for EDA data
+🎯 Key Objectives
+
+Build an end-to-end ML pipeline tailored for EDA data
 
 Predict critical VLSI metrics:
 
-⏱ Timing violations
+Timing violations
 
-🔋 Power consumption
+Power consumption
 
-📍 Routing congestion
+Routing congestion
 
-📐 Placement quality
+Placement quality
 
-Reduce iteration cycles in physical design
+Reduce physical design iteration cycles
 
-Establish a scalable research framework for ML-driven chip design
+Enable intelligent feedback-driven optimization
 
 🏗️ System Architecture
 EDA Reports / Netlist Data
-          ↓
+        ↓
 Data Parsing & Cleaning
-          ↓
+        ↓
 Feature Engineering
-          ↓
-Feature Selection / Dimensionality Reduction
-          ↓
-Model Training (ML / DL)
-          ↓
+        ↓
+Feature Selection
+        ↓
+Model Training (ML/DL)
+        ↓
 Performance Evaluation
-          ↓
-Design Optimization Feedback
+        ↓
+Optimization Feedback Loop
 📂 Repository Structure
 VLSI_EDA/
 │
-├── data/                # Raw and processed datasets
-├── notebooks/           # Exploratory and experiment notebooks
+├── data/                # Raw and processed EDA datasets
+├── notebooks/           # Experimental notebooks
 ├── src/                 # Core pipeline scripts
-│   ├── preprocessing.py
-│   ├── feature_engineering.py
-│   ├── train.py
-│   ├── evaluate.py
-│   └── utils.py
-│
 ├── models/              # Saved trained models
-├── results/             # Performance metrics and plots
+├── results/             # Evaluation outputs and plots
 ├── requirements.txt
 └── README.md
 📊 Dataset Description
 
-The dataset consists of structured EDA outputs including:
+The pipeline supports structured EDA outputs such as:
 
 Static Timing Analysis (STA) reports
 
@@ -64,24 +60,24 @@ Power analysis reports
 
 Netlist-derived structural features
 
-Layout-based geometric features
+Layout geometric features
 
 Congestion metrics
 
-Data preprocessing includes:
+Preprocessing steps include:
 
 Missing value handling
 
-Normalization / scaling
+Scaling & normalization
 
 Outlier filtering
 
 Feature correlation analysis
 
 🤖 Models Implemented
-Classical ML Models
+Classical Machine Learning
 
-Random Forest Regressor
+Random Forest
 
 XGBoost
 
@@ -89,16 +85,13 @@ LightGBM
 
 Support Vector Regression
 
-Deep Learning Models
+Deep Learning
 
 Fully Connected Neural Networks
 
 (Planned) Graph Neural Networks for netlist topology modeling
 
 📈 Evaluation Metrics
-
-Depending on prediction task:
-
 Regression Tasks
 
 Mean Absolute Error (MAE)
@@ -117,63 +110,61 @@ F1 Score
 
 ROC-AUC
 
-Cross-validation and hyperparameter tuning are performed using GridSearchCV / Bayesian Optimization.
+Cross-validation and hyperparameter tuning are supported.
 
-⚙️ Installation & Setup
+⚙️ Installation
 
 Clone the repository:
-
 git clone https://github.com/Ayushdevo/VLSI_EDA.git
 cd VLSI_EDA
-
 Install dependencies:
-
 pip install -r requirements.txt
+Run the pipeline:
+python vlsi_eda_ml_pipeline.py
+🔬 Research Scope & Extensions
 
-Run training pipeline:
-
-python src/train.py
-🔬 Research Extensions
-
-This repository is structured to support advanced research directions:
+This framework is structured for advanced research and industrial applications:
 
 Reinforcement Learning for placement optimization
 
-Graph Neural Networks for structural netlist modeling
+Graph Neural Networks for netlist representation
 
 Surrogate modeling for rapid design space exploration
 
-AutoML integration for hyperparameter optimization
+AutoML integration for hyperparameter tuning
 
-Hardware-aware ML models for ASIC flows
+ML-driven congestion mitigation
 
 📊 Experimental Results
 
-(To be updated after experiments)
+(To be updated after benchmarking)
 
-Model	MAE	RMSE	R² Score
+Model	          MAE 	RMSE	R²
 Random Forest	TBD	TBD	TBD
-XGBoost	TBD	TBD	TBD
+XGBoost	          TBD       TBD       TBD
 Neural Net	TBD	TBD	TBD
 🧠 Why This Project Matters
 
-As chip complexity increases (sub-5nm nodes, billion-transistor designs), traditional heuristic EDA flows become bottlenecks. ML-augmented EDA can:
+As semiconductor technology scales to advanced nodes (sub-5nm and beyond), traditional heuristic EDA approaches face scalability challenges.
 
-Reduce runtime significantly
+Machine Learning-assisted EDA enables:
 
-Improve optimization quality
+Faster convergence
 
-Enable adaptive design strategies
+Improved optimization quality
 
-Accelerate tape-out cycles
+Reduced runtime
 
-This project bridges AI and VLSI physical design — a growing research and industry frontier.
+Smarter design feedback loops
+
+This project represents a step toward AI-accelerated chip design.
 
 👨‍💻 Author
 
 Ayush Tiwari
 Data Science & AI
 IIT Guwahati
+
 AI × VLSI × Optimization
 
 📜 License
